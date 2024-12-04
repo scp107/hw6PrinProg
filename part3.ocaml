@@ -1,0 +1,9 @@
+let psum lst =
+  let rec helper lst acc result = 
+    match lst with
+    | [] -> List.rev result 
+    | head :: tail -> 
+      let new_acc = acc + head  
+      in helper tail new_acc (new_acc :: result)  
+  in
+  helper lst 0 []  
