@@ -1,8 +1,0 @@
-let getnthdigit number n =
-  if number = 0 && n = 1 then 0
-  else
-    let digits = string_of_int (abs number) in
-    if n > 0 && n <= String.length digits then
-      int_of_char (digits.[n - 1]) - int_of_char '0'
-    else
-      failwith "Index out of bounds"
